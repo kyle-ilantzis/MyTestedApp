@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+// Kotlin <3
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 25
@@ -23,20 +26,28 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin <3
+    // compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+
     compile 'com.android.support:appcompat-v7:25.4.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    testCompile 'junit:junit:4.12'
+    // App's dependencies for doing http
+    compile "com.squareup.retrofit2:retrofit:2.3.0"
+    compile "com.squareup.retrofit2:converter-gson:2.3.0"
 
-    // Android Testing Support Library's runner and rules
-    androidTestCompile "com.android.support.test:runner:1.0.0"
-    androidTestCompile "com.android.support.test:rules:1.0.0"
+    testCompile 'junit:junit:4.12'
 
     // Dependencies for Android unit tests
     androidTestCompile "junit:junit:4.12"
     androidTestCompile "org.mockito:mockito-core:1.10.19"
     androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
     androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+
+    // Android Testing Support Library's runner and rules
+    androidTestCompile "com.android.support.test:runner:1.0.0"
+    androidTestCompile "com.android.support.test:rules:1.0.0"
 
     // Espresso UI Testing
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.0', {
