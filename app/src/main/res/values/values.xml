@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_twice_horizontal">
+        32dp
+    </dimen>
+    <dimen name="spacing_horizontal">
+        16dp
+    </dimen>
+    <dimen name="spacing_half_horizontal">
+        8dp
+    </dimen>
+
+    <dimen name="spacing_twice_vertical">
+        32dp
+    </dimen>
+    <dimen name="spacing_vertical">
+        16dp
+    </dimen>
+    <dimen name="spacing_half_vertical">
+        8dp
+    </dimen>
+    <dimen name="spacing_quarter_vertical">
+        4dp
+    </dimen>
+
+    <dimen name="button_action_width">
+        248dp
+    </dimen>
+    <dimen name="button_action_height">
+        52dp
+    </dimen>
+
+    <item name="dialog_min_width_major" type="dimen">
+        65%
+    </item>
+    <item name="dialog_min_width_minor" type="dimen">
+        95%
+    </item>
+</resources>

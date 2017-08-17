@@ -1,16 +1,107 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
         <item name="colorPrimary">
-            @color/colorPrimary
+            @color/green
         </item>
         <item name="colorPrimaryDark">
-            @color/colorPrimaryDark
+            @color/green
         </item>
         <item name="colorAccent">
-            @color/colorAccent
+            @color/green
+        </item>
+
+        <item name="android:colorBackground">
+            @color/black
+        </item>
+        <item name="android:windowBackground">
+            @color/black
+        </item>
+
+        <item name="android:textColorPrimary">
+            @color/white
+        </item>
+        <item name="android:textColorSecondary">
+            @color/body_text_dark</item>
+         
+        <item name="android:textColorTertiary">
+            @color/body_text_dark</item>
+         
+        <item name="android:textColorHint">
+            @color/body_text_dark
+        </item>
+
+        <item name="android:statusBarColor">
+            @color/gray
+        </item>
+
+        <!--<item name="popupMenuStyle">@style/PopupMenu</item>-->
+        <!--<item name="textAppearanceLargePopupMenu">@style/TextPopupMenuLarge</item>-->
+        <!--<item name="textAppearanceSmallPopupMenu">@style/TextPopupMenuSmall</item>-->
+
+        <item name="dialogTheme">
+            @style/DialogTheme
+        </item>
+        <item name="alertDialogTheme">
+            @style/AlertDialogTheme
+        </item>
+    </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:textColorTertiary">
+            @color/black</item>
+         
+        <item name="android:windowMinWidthMajor">
+            @dimen/dialog_min_width_major
+        </item>
+        <item name="android:windowMinWidthMinor">
+            @dimen/dialog_min_width_minor
+        </item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">
+            @color/black
+        </item>
+    </style>
+
+    <style name="TextTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">
+            20sp
+        </item>
+    </style>
+
+    <style name="TextBody" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">
+            16sp
+        </item>
+        <item name="android:textColor">
+            @color/body_text_dark
+        </item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">
+            @dimen/button_action_width
+        </item>
+        <item name="android:layout_height">
+            @dimen/button_action_height
+        </item>
+        <item name="android:layout_marginTop">
+            @dimen/spacing_vertical
+        </item>
+        <item name="android:layout_gravity">
+            center
+        </item>
+        <item name="android:clipToPadding">
+            false
+        </item>
+    </style>
+
+    <style name="Button.Positive" parent="Button">
+        <item name="android:background">
+            @drawable/ripple_rectangle_rounded_32dp_green
         </item>
     </style>
 

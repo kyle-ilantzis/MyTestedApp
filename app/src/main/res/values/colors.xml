@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">
-        #3F51B5
+    <color name="green">
+        #0E9260
     </color>
-    <color name="colorPrimaryDark">
-        #303F9F
+    <color name="green_light">
+        #0E9260
     </color>
-    <color name="colorAccent">
-        #FF4081
+    <color name="gray">
+        #6C6E74
+    </color>
+    <color name="gray_light">
+        #C4C4C4
+    </color>
+    <color name="black">
+        #2D3039
+    </color>
+    <color name="white">
+        #FFFFFF
+    </color>
+    <color name="body_text_dark">
+        @color/gray_light
     </color>
 </resources>
