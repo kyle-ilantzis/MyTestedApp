@@ -1,7 +1,9 @@
-package com.mytestedapp;
+package com.mytestedapp.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.mytestedapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
