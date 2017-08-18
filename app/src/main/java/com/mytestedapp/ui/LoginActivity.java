@@ -51,8 +51,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void onLoginSignInClick() {
 
-        String username = mUsername.toString();
-        String password = mPassword.toString();
+        String username = mUsername.getText().toString();
+        String password = mPassword.getText().toString();
 
         mProgressDialog = new ProgressDialog(this, R.style.DialogTheme);
         mProgressDialog.setMessage("Sign in you in...");

@@ -35,7 +35,7 @@ public class Injection {
         OkHttpClient okHttpClient = provideOkHttpClient();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://localhost:9000")
+                .baseUrl("http://10.0.2.2:9000")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
