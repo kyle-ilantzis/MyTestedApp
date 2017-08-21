@@ -23,7 +23,8 @@ public class LoginActivityTest {
 
         new InjectionRobot()
                 .setup()
-                .setUsernamePassword("admin", "password");
+                .setUsernamePassword("admin", "password")
+                .setProfile("Bart", "Jacobs", "1");
 
         mActivityTestRule.launchActivity(new Intent(Intent.ACTION_MAIN));
 
@@ -39,7 +40,8 @@ public class LoginActivityTest {
 
         new InjectionRobot()
                 .setup()
-                .setUsernamePassword("admin", "password");
+                .setUsernamePassword("admin", "password")
+                .setProfile("Bart", "Jacobs", "1");
 
         mActivityTestRule.launchActivity(new Intent(Intent.ACTION_MAIN));
 
@@ -55,7 +57,8 @@ public class LoginActivityTest {
 
         new InjectionRobot()
                 .setup()
-                .setUsernamePasswordNetworkError();
+                .setUsernamePasswordNetworkError()
+                .setProfile("Bart", "Jacobs", "1");
 
         mActivityTestRule.launchActivity(new Intent(Intent.ACTION_MAIN));
 
@@ -64,5 +67,24 @@ public class LoginActivityTest {
                 .password("badPassword")
                 .login()
                 .isNetworkError();
+    }
+
+    @Test
+    public void it_should_logout() {
+
+        new InjectionRobot()
+                .setup()
+                .setUsernamePassword("admin", "password")
+                .setProfile("Bart", "Jacobs", "1");
+
+        mActivityTestRule.launchActivity(new Intent(Intent.ACTION_MAIN));
+
+        new LoginRobot()
+                .username("admin")
+                .password("password")
+                .login()
+                .isMainScreen()
+                .ok()
+                .isLoginScreen();
     }
 }

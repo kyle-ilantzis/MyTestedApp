@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.mytestedapp.rest.LoginRequest;
 import com.mytestedapp.rest.LoginResponse;
+import com.mytestedapp.rest.ProfileResponse;
 import com.mytestedapp.rest.RestService;
 
 import org.hamcrest.Matcher;
@@ -195,14 +196,30 @@ public class InjectionRobot {
 
         Matcher<LoginRequest> notMatcher = new Not(matcher);
 
-        doReturn(InjectionRobot.<LoginResponse>makeErrorCall(400, "{error: \"invalid credentials\"}")).when(mRestService).login(argThat(notMatcher));
+        doReturn(makeErrorCall(400, "{error: \"invalid credentials\"}")).when(mRestService).login(argThat(notMatcher));
 
         return this;
     }
 
     public InjectionRobot setUsernamePasswordNetworkError() {
 
-        doReturn(InjectionRobot.<LoginResponse>makeFailureCall(new SocketException("test bad network"))).when(mRestService).login(Matchers.<LoginRequest>any());
+        doReturn(makeFailureCall(new SocketException("test bad network"))).when(mRestService).login(Matchers.<LoginRequest>any());
+
+        return this;
+    }
+
+    public InjectionRobot setProfile(String firstName, String lastName, String totalRides) {
+
+        ProfileResponse profileResponse = new ProfileResponse(firstName, lastName, totalRides);
+
+        doReturn(makeSuccessCall(profileResponse)).when(mRestService).profile();
+
+        return this;
+    }
+
+    public InjectionRobot setProfileNetworkError() {
+
+        doReturn(makeFailureCall(new SocketException())).when(mRestService).profile();
 
         return this;
     }
