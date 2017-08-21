@@ -29,7 +29,7 @@
             android:gravity="center_horizontal"
             android:layout_marginStart="@dimen/spacing_horizontal"
             android:layout_marginEnd="@dimen/spacing_horizontal"
-            android:text="Total rides taken"/>
+            android:text="Total bike rides taken"/>
 
         <TextView
             android:id="@+id/text_main_total_rides"

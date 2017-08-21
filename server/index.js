@@ -8,7 +8,7 @@ app.post('/login', function (req, res) {
 
   console.log(req.body);
 
-  if ( req.body.username !== 'admin' || req.body.password !== 'secret' ) {
+  if ( req.body.username !== 'jake' || req.body.password !== 'secret' ) {
     res.status('404').json({error: 'invalid credentials'});
     return;
   }
