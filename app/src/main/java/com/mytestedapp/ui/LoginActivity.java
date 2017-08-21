@@ -14,6 +14,7 @@ import android.widget.EditText;
 
 import com.mytestedapp.Injection;
 import com.mytestedapp.R;
+import com.mytestedapp.Testing;
 import com.mytestedapp.rest.LoginRequest;
 import com.mytestedapp.rest.LoginResponse;
 import com.mytestedapp.rest.RestService;
@@ -49,6 +50,18 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Testing.sActivity = this;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Testing.sActivity = null;
+    }
+
     private void onLoginSignInClick() {
 
         String username = mUsername.getText().toString();
@@ -75,7 +88,9 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(@NonNull Call<LoginResponse> call, @NonNull Throwable t) {
-                        Log.e("MyTestedApp", "Failed to login: " + t.getMessage() + " :: " + t.getCause().getMessage());
+                        String msg = t.getMessage();
+                        String causeMsg = t.getCause() != null ? t.getCause().getMessage() : null;
+                        Log.e("MyTestedApp", "Failed to login: " + msg + " :: " + causeMsg);
                         onLoginNetworkError();
                     }
                 }
