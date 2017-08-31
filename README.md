@@ -42,7 +42,7 @@ See the following links for an idea on how to use espresso.
 * [Espresso basics](https://google.github.io/android-testing-support-library/docs/espresso/basics/index.html)
 * [Espresso recipes](https://google.github.io/android-testing-support-library/docs/espresso/advanced/)
 * [Espresso cheat sheet](https://google.github.io/android-testing-support-library/docs/espresso/cheatsheet/index.html)
-* Robots in [app/src/androidTest](app/src/androidTest)
+* Robots in [app/src/androidTest](app/src/androidTest/java/com/mytestedapp)
 
 **Mockito** is for mocking the REST API.
 When mocking, all the code should be abstracted by 
