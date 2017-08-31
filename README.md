@@ -68,6 +68,28 @@ says the HOW (and the how is ugly espresso functions and ugly mocking details).
 For more information see [Instrumentation Testing Robots](https://realm.io/news/kau-jake-wharton-testing-robots/)
 by Jake Wharton.
 
+# Run the tests
+
+In Android Studio right click on **app/src/androidTest/java** and choose "Run All Tests"
+
+# Run the app
+
+## Start the server
+
+Assuming you have nodejs and npm installed
+
+    $> cd server
+    $> npm install
+    $> ./start
+
+## Start the app
+
+In android studio install the app on an emulator.
+
+If you want to run the app on a device you will need to change the IP address of the server.
+In **app/src/main/java/com/mytestedapp/Injection.java** change the provideRestService method.
+Change the baseUrl to your machine's IP address.
+
 # References
 
 * Instrumentation Testing Robots (https://realm.io/news/kau-jake-wharton-testing-robots/)
