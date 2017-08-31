@@ -12,11 +12,6 @@ It has 2 screens:
 
 # Testing
 
-Testing is one of the first things you should be thinking
-of when coding.
-
-Always be asking: "How do I test the code I will be writing?"
-
 Write integration tests for your application and its use cases.
 
     Integration testing
@@ -25,22 +20,19 @@ Write integration tests for your application and its use cases.
     https://en.wikipedia.org/wiki/Integration_testing
 
 To achieve the most combined software modules tested together write UI tests with Espresso.
+
 This allows you to test if you properly handle button clicks and text inputs. 
-You should not test by hand when you can write code to do it for you. Not only for you but for the next developer that maintains
-your app.
+This allows you to test if your business rules are respected.
+This allows you to test various network errors (timeouts, server errors, client errors)
 
-Write tests for various scenarios such as network errors (timeouts, server errors, client errors)
-and user clicks.
-
-Write tests for every use case to ensure they actually work. Write tests for every business rule to ensure
-they are actually respected. When you modify application behaviour modify the tests so
-that they follow the new behaviour.
+You should not test by hand when you can write code to do it for you. 
+Not only for you but for the next developer that maintains your app.
 
 ## Writing tests
 
-In **app/src/androidTest** you find:
+In [app/src/androidTest](app/src/androidTest/java/com/mytestedapp) you find:
 
-* tests for each activity
+* Tests for each activity
 * Robots to abstract tests and make them look more like english
 
 **Espresso** is for integration tests.
@@ -50,10 +42,12 @@ See the following links for an idea on how to use espresso.
 * [Espresso basics](https://google.github.io/android-testing-support-library/docs/espresso/basics/index.html)
 * [Espresso recipes](https://google.github.io/android-testing-support-library/docs/espresso/advanced/)
 * [Espresso cheat sheet](https://google.github.io/android-testing-support-library/docs/espresso/cheatsheet/index.html)
-* Robots in app/src/androidTest
+* Robots in [app/src/androidTest](app/src/androidTest)
 
 **Mockito** is for mocking the REST API.
-When mocking, all the code should be abstracted by InjectionRobot in **app/src/androidTest**.
+When mocking, all the code should be abstracted by 
+[InjectionRobot](app/src/androidTest/java/com/mytestedapp/InjectionRobot.java) 
+in **app/src/androidTest**.
 See the following links for an idea on how to use mockito.
 
 * [How to use mockito](http://site.mockito.org/#how)
@@ -87,7 +81,7 @@ Assuming you have nodejs and npm installed
 In android studio install the app on an emulator.
 
 If you want to run the app on a device you will need to change the IP address of the server.
-In **app/src/main/java/com/mytestedapp/Injection.java** change the provideRestService method.
+In [Injection.java](app/src/main/java/com/mytestedapp/Injection.java) change the provideRestService method.
 Change the baseUrl to your machine's IP address.
 
 # References
