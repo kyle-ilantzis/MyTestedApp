@@ -72,9 +72,11 @@ In Android Studio right click on **app/src/androidTest/java** and choose "Run Al
 
 Assuming you have nodejs and npm installed
 
-    $> cd server
-    $> npm install
-    $> ./start
+```bash
+$> cd server
+$> npm install
+$> ./start
+```
 
 ## Start the app
 
@@ -86,10 +88,10 @@ Change the baseUrl to your machine's IP address.
 
 # References
 
-* Instrumentation Testing Robots (https://realm.io/news/kau-jake-wharton-testing-robots/)
-* Espresso basics (https://google.github.io/android-testing-support-library/docs/espresso/basics/index.html)
-* Espresso recipes (https://google.github.io/android-testing-support-library/docs/espresso/advanced/)
-* Espresso cheat sheet (https://google.github.io/android-testing-support-library/docs/espresso/cheatsheet/index.html)
-* How to use mockito (http://site.mockito.org/#how)
-* More about mockito (http://site.mockito.org/#more)
-* Main reference documentation (http://javadoc.io/page/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
+* [Instrumentation Testing Robots](https://realm.io/news/kau-jake-wharton-testing-robots/)
+* [Espresso basics](https://google.github.io/android-testing-support-library/docs/espresso/basics/index.html)
+* [Espresso recipes](https://google.github.io/android-testing-support-library/docs/espresso/advanced/)
+* [Espresso cheat sheet](https://google.github.io/android-testing-support-library/docs/espresso/cheatsheet/index.html)
+* [How to use mockito](http://site.mockito.org/#how)
+* [More about mockito](http://site.mockito.org/#more)
+* [Main reference documentation](http://javadoc.io/page/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
